@@ -285,29 +285,21 @@ section {
 .logo__icon {
     width: 44px;
     height: 44px;
-    background: var(--color-slate);
-    border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-}
-
-.logo__icon::before {
-    content: '';
-    position: absolute;
-    bottom: 4px;
-    left: 4px;
-    right: 4px;
-    height: 3px;
-    background: var(--color-orange);
-    border-radius: 2px;
 }
 
 .logo__icon svg {
     width: 28px;
     height: 28px;
     fill: var(--color-white);
+}
+
+.logo__icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 .logo__text {
@@ -533,7 +525,10 @@ section {
 .hero {
     position: relative;
     padding: calc(70px + var(--space-lg)) 0 var(--space-lg);
-    background: linear-gradient(135deg, var(--color-slate) 0%, var(--color-slate-dark) 100%);
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(26, 37, 47, 0.95) 100%),
+                url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
 }
 
@@ -642,7 +637,10 @@ section {
 /* Page Hero (Internal pages) */
 .page-hero {
     padding: calc(70px + var(--space-lg)) 0 var(--space-lg);
-    background: var(--color-slate);
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.92) 0%, rgba(26, 37, 47, 0.95) 100%),
+                url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -767,8 +765,6 @@ section {
     width: 64px;
     height: 64px;
     margin: 0 auto var(--space-sm);
-    background: var(--color-slate);
-    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -780,6 +776,12 @@ section {
     stroke: var(--color-orange);
     stroke-width: 1.5;
     fill: none;
+}
+
+.service-card__icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .service-card__title {
@@ -1682,7 +1684,7 @@ section {
 }
 
 .footer__brand .logo__icon {
-    background: var(--color-slate);
+    background: none;
 }
 
 .footer__brand .logo__text {
